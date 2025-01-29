@@ -1,0 +1,64 @@
+.booking-cell {
+    position: relative;
+    text-align: center;
+    padding: 8px;
+    cursor: pointer;
+    border-left: 1px solid #e9e9e9;
+    border-top: 1px solid #e9e9e9;
+    background: inherit;
+}
+
+.booking-cell:has(.is-continuous) {
+    border-left: none;
+}
+
+.booking-cell .content {
+    z-index: 1;
+    font-size: 14px;
+}
+
+.booking-cell .is-continuous {
+    position: absolute;
+    left: -40px;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    pointer-events: none;
+    border-left: 1px solid #e9e9e9;
+}
+
+.booking-cell:hover {
+    opacity: 0.8;
+    pointer-events: auto;
+}
+
+.is-continuous:hover {
+    opacity: inherit;
+}
+
+.booking-cell,
+.cell {
+    position: relative;
+    text-align: center;
+    padding: 8px;
+    cursor: pointer;
+    background: inherit;
+}
+
+.booking-cell.selected,
+.cell.selected {
+    background: #adf;
+}
+
+.cell--disabled {
+    background: transparent;
+}
+
+.selected {
+    background: #adf;
+    cursor: grabbing;
+}
+
+.mouse-select__frame {
+    background: rgba(2, 238, 255, 0.5);
+}

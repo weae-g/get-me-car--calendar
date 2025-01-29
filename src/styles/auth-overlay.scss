@@ -1,0 +1,147 @@
+.auth-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+
+  .auth-modal {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 400px; /* Фиксированная ширина */
+    min-height: 300px; /* Минимальная высота для стабильного отображения */
+    text-align: center;
+
+    .auth-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    input {
+      padding: 8px 12px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #e6e9f1;
+      width: 100%;
+      transition: border-color 0.3s ease;
+
+      &:focus {
+        border-color: #0077ff;
+        outline: none;
+      }
+    }
+
+    .password-container {
+      position: relative;
+      width: 100%;
+
+      input {
+        margin-bottom: 10px;
+      }
+
+      .auth-forgot-password {
+        position: absolute;
+        right: 0;
+        bottom: -18px;
+        font-size: 14px;
+        color: #0077ff;
+        cursor: pointer;
+
+        a {
+          text-decoration: none;
+          color: #0077ff;
+          font-size: 12px;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: #005bb5;
+          }
+        }
+      }
+    }
+
+    button {
+      padding: 8px 16px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #0077ff;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #005bb5;
+      }
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .auth-overlay {
+      .auth-modal {
+        width: 90%; /* Уменьшение ширины для мобильных устройств */
+        padding: 20px;
+
+        input {
+          font-size: 14px;
+        }
+
+        button {
+          font-size: 14px;
+          padding: 6px 12px;
+        }
+
+        .password-container {
+          .auth-forgot-password {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .auth-overlay {
+      .auth-modal {
+        padding: 15px;
+
+        input {
+          font-size: 12px;
+        }
+
+        button {
+          font-size: 12px;
+          padding: 4px 8px;
+        }
+
+        .password-container {
+          .auth-forgot-password {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}

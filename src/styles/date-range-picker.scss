@@ -1,0 +1,43 @@
+@media (max-width: 800px) {
+    .rdrDateRangePickerWrapper {
+        padding: 0 5px;
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+
+        span {
+            font-size: 14px !important;
+        }
+    }
+
+    .rdrStaticRanges {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 260px;
+    }
+
+    .rdrDefinedRangesWrapper {
+        width: 100%;
+    }
+
+    .rdrStaticRangeLabel {
+        padding: 4px 8px;
+    }
+
+    .rdrStaticRange {
+        margin-bottom: 5px;
+    }
+
+    .rdrMonthPicker,
+    .rdrYearPicker {
+        margin: 0;
+        width: 100%;
+    }
+
+    .rdrWeekDays,
+    .rdrDays,
+    .rdrMonth {
+        max-width: 260px;
+    }
+}

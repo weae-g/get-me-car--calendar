@@ -1,0 +1,148 @@
+.calendar-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px 20px;
+    background: #429cf3;
+    border-radius: 8px;
+    position: relative;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+}
+
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+}
+
+.search-bar input {
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 8px 0 0 8px;
+    border: 2px solid #e6e9f1;
+    width: 100%;
+    transition: border-color 0.3s ease;
+    line-height: 0;
+
+    &:focus {
+        border-color: #0077ff;
+        outline: none;
+    }
+}
+
+.search-button {
+    background-color: #fff;
+    border: 2px solid #e6e9f1;
+    border-left: none;
+
+    border-radius: 0 8px 8px 0;
+    padding: 5px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background-color: #e7e7e7;
+        border-color: #e7e7e7;
+    }
+
+    svg {
+        color: #429cf3;
+    }
+}
+
+.icon-dropdown {
+    display: flex;
+    align-items: center;
+}
+
+.options-icon,
+.calendar-icon {
+    cursor: pointer;
+    color: white;
+
+    &:hover {
+        color: #e7e7e7;
+    }
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border: 1px solid #e6e9f1;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    width: 250px;
+}
+
+.dropdown-menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dropdown-menu .react-select__control {
+    margin-bottom: 8px;
+}
+
+.calendar-icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    p {
+        margin: 0;
+        background: #fff;
+        padding: 8px 12px;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+}
+
+.calendar-dropdown {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    z-index: 100;
+}
+
+.date-range {
+    color: #161616;
+    border: 2px solid #e6e9f1;
+}
+
+.date-range-container {
+    display: flex;
+    gap: 12px;
+}
+
+@media (max-width: 768px) {
+    .calendar-options {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .calendar-icon {
+        p {
+            font-size: 14px;
+        }
+    }
+}

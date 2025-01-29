@@ -1,0 +1,61 @@
+/* LanguageSwitcher.css */
+.language-switcher {
+    position: relative;
+}
+
+.language-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    transition:
+        background-color 0.3s,
+        color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        color: #e7e7e7;
+    }
+}
+
+.language-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #fff;
+    border: 1px solid #e6e9f1;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    min-width: 80px;
+    z-index: 1000;
+    padding: 4px;
+    gap: 4px;
+
+    .dropdown-item {
+        background: none;
+        border: none;
+        border-radius: 8px;
+        padding: 8px 16px;
+        font-size: 14px;
+        cursor: pointer;
+        text-align: center;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background: #91caff;
+            color: #fff;
+        }
+
+        &.active {
+            background: #429cf3;
+            color: #fff;
+            font-weight: bold; // Подчеркнуть активное состояние
+        }
+    }
+}
+

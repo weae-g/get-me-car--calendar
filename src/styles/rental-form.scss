@@ -1,0 +1,146 @@
+.rental-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    &__subtitle {
+        color: black;
+        font-size: 20px;
+    }
+
+    &__error {
+        color: red;
+        font-size: 14px;
+    }
+
+    &__row {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 24px;
+
+        &--contact {
+            align-items: center;
+        }
+
+        &--services {
+            justify-content: space-between;
+        }
+
+        &--options {
+            flex-direction: column;
+        }
+    }
+
+    &__col {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 12px;
+    }
+
+    &__label {
+        flex: 1 1 45%;
+        font-weight: 500;
+        font-size: 16px;
+        color: #2b2b2b;
+
+        &--checkbox {
+            color: black;
+        }
+    }
+
+    &__input {
+        padding: 8px 12px;
+        font-size: 16px;
+        border-radius: 8px;
+        border: 1px solid #e6e9f1;
+        width: 100%;
+
+        transition: border-color 0.3s ease;
+
+        &:focus {
+            border-color: #0077ff;
+            outline: none;
+        }
+
+
+        transition: border-color 0.3s ease;
+
+        &:focus {
+            border-color: #0077ff;
+            outline: none;
+        }
+    }
+
+    &__checkbox {
+        margin-right: 10px;
+        transition: border-color 0.3s ease;
+
+        &:focus {
+            border-color: #0077ff;
+            outline: none;
+        }
+    }
+
+    &__button {
+        &--search {
+            padding: 8px 16px;
+        }
+
+        &--save {
+            width: 100%;
+
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .rental-form {
+        gap: 15px;
+    }
+
+    .rental-form__subtitle {
+        font-size: 18px;
+    }
+
+    .rental-form__row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .rental-form__label,
+    .rental-form__input {
+        font-size: 14px;
+    }
+
+    .rental-form__button--search {
+        padding: 6px 12px;
+        width: 100%;
+
+    }
+
+    .rental-form__button--save {
+        margin-top: 15px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .rental-form__subtitle {
+        font-size: 16px;
+    }
+
+    .rental-form__label,
+    .rental-form__input {
+        font-size: 14px;
+    }
+
+    .rental-form__button--search {
+        padding: 4px 8px;
+    }
+}
